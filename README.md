@@ -1,6 +1,34 @@
-# newropo
-My new Repo!
-[![](https://mermaid.ink/img/pako:eNq9VL1u3DAMfhVCUwPc-ZJ085CpQYMgP8NlqzvwJPqsxpYcibqmPdzDFB2CznkEv1joHxwCZGmaoJ7kj9RH8hPJrdLekMpVpLtETtMni-uATeFAvhYDW21bdAyr4L9HCi8NAm56fLRMbvOTkxHP4fPpDVTMbcwXi8jJWIqZjllFdbTu1malXdA9Nm1N2LYL55niSIWa7QaZ9hF6cDzPhX-KlMPZzeUFGK9TQ45HL0MvLr9Peg1aJ-ZXZsgVgVyC0tb0PxL89g_5neMGlzrYlv8mzSt5Jgh2XTH4EvZE1-BwQ2s0PoD2DXUPCAh0TzoxBvCgu0dj1_55NOk7WKWoUczny-srecohmBWS91LFIKOo4t3rdPmyhUIGxHHfWCqXn6HXuj9Qdr-0rQs1E0zIabQeHx5_nB_NjwoFuxlkWQZf367jpJ7oWCbXPXS_RUWs6xXqW_iwh4zQEPvghqOusEGDB4O4gZyhYH8KRQSZLxy6Q81UQ0Haxcj0b3ukUNIHzVSKoRJTLVUXbieumNgvfzitcg6JZiq1fdXTslB5iXUUlIyVFC7HjTIslt0TfXGJzQ?type=png)](https://mermaid.live/edit#pako:eNq9VL1u3DAMfhVCUwPc-ZJ085CpQYMgP8NlqzvwJPqsxpYcibqmPdzDFB2CznkEv1joHxwCZGmaoJ7kj9RH8hPJrdLekMpVpLtETtMni-uATeFAvhYDW21bdAyr4L9HCi8NAm56fLRMbvOTkxHP4fPpDVTMbcwXi8jJWIqZjllFdbTu1malXdA9Nm1N2LYL55niSIWa7QaZ9hF6cDzPhX-KlMPZzeUFGK9TQ45HL0MvLr9Peg1aJ-ZXZsgVgVyC0tb0PxL89g_5neMGlzrYlv8mzSt5Jgh2XTH4EvZE1-BwQ2s0PoD2DXUPCAh0TzoxBvCgu0dj1_55NOk7WKWoUczny-srecohmBWS91LFIKOo4t3rdPmyhUIGxHHfWCqXn6HXuj9Qdr-0rQs1E0zIabQeHx5_nB_NjwoFuxlkWQZf367jpJ7oWCbXPXS_RUWs6xXqW_iwh4zQEPvghqOusEGDB4O4gZyhYH8KRQSZLxy6Q81UQ0Haxcj0b3ukUNIHzVSKoRJTLVUXbieumNgvfzitcg6JZiq1fdXTslB5iXUUlIyVFC7HjTIslt0TfXGJzQ)
+```mermaid
+sequenceDiagram
+    participant browser
+    participant server
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+    activate server
+    server-->>browser: HTML document
+    deactivate server
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+    activate server
+    server-->>browser: the css file
+    deactivate server
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+    activate server
+    server-->>browser: the JavaScript file
+    deactivate server
+
+    Note right of browser: O navegador começa a executar o código JavaScript que busca o JSON do servidor
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+    activate server
+    server-->>browser: [{ "content": "HTML é fácil", "date": "2023-1-1" }, ... ]
+    deactivate server
+
+    Note right of browser: O navegador executa a função callback (função de retorno de chamada) que renderiza as notas
+  
+```
+
 
 ```mermaid
 sequenceDiagram
